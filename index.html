@@ -227,12 +227,28 @@
             background-color: #2a2a2a;
             color: #ff9cc2;
         }
+        .divider {
+            border-top: 2px solid #d147a3;
+            margin: 20px 0;
+            transition: border-color 0.3s;
+        }
+        .dark-theme .divider {
+            border-color: #ff9cc2;
+        }
         .participants-list {
             list-style-type: none;
             padding: 0;
         }
         .participants-list li {
             margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(209, 71, 163, 0.3);
+        }
+        .dark-theme .participants-list li {
+            border-bottom-color: rgba(255, 156, 194, 0.3);
+        }
+        .participants-list li:last-child {
+            border-bottom: none;
         }
         @media (max-width: 768px) {
             .sidebar {
@@ -290,6 +306,8 @@
                 </a>
                 <h1>Участники дискорд-сервера Вишневых Аллей</h1>
             </header>
+
+            <div class="divider"></div>
 
             <main class="content">
                 <h2>Список участников</h2>
